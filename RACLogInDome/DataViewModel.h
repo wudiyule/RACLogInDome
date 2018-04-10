@@ -9,9 +9,15 @@
 #import <Foundation/Foundation.h>
 @class RACCommand;
 @interface DataViewModel : NSObject
-@property (nonatomic, copy)NSString *account;
-@property (nonatomic, copy)NSString *password;
+@property (nonatomic, copy)NSString *account;/**<账号*/
+@property (nonatomic, copy)NSString *password;/**密码*/
 
+
+/**
+ 验证账号密码
+
+ @return RACCommand信号量
+ */
 - (RACCommand *)verifyAccountAndPasswor;
 
 @end
